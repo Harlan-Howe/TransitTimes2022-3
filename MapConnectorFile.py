@@ -319,15 +319,7 @@ class MapConnector:
 
 
 
-        # the code shown below can be turned on to demonstrate the self.wait_for_click()
-        # method. This is an OPTIONAL method you can use inside your search to allow
-        # you to step through the search, waiting for the mouse to click. (I thought it
-        # might be helpful.)
-        """
-        while True:
-            print ("waiting for click")
-            self.wait_for_click()
-            print ("Advancing")
-        """
+        # Hint: if you would like to be able to pause after each cycle of the search, consider adding "wait_for_click()" inside your primary loop.
+        # ...but be sure to delete it for your finished program!
         # -----------------------------------------
         return result_path
