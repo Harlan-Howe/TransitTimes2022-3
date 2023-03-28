@@ -284,9 +284,13 @@ class MapConnector:
         makes the program freeze until the user releases the mouse in the window.
         :return: None
         """
+        if (self.click_mode != ClickHandlerMode.SEARCHING)
+            raise RuntimeError("You asked to wait_for_click, but it only works in SEARCHING mode. "
+                               "(Otherwise the program would freeze indefinitely.)")
         self.waiting_for_click = True
         while self.waiting_for_click:
             cv2.waitKey(1)
+            # if the user clicks the mouse, then handle_click() will change the waiting_for_click variable.
 
     def get_neighbor_edges(self,city:int)->List[Edge_Data]:
         """
