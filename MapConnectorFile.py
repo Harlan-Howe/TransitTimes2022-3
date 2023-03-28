@@ -89,9 +89,8 @@ class MapConnector:
         the two cities before it performs a search and displays the result.
         :return:
         """
-        # if anybody does anything mouse-related in the "Map" window,
-        # call self.handleClick.
-        cv2.setMouseCallback("Map", self.handleClick)
+        # if anybody does anything mouse-related in the "Map" window, call self.handle_click.
+        cv2.setMouseCallback("Map", self.handle_click)
         self.reset()
         while True:
             while self.click_mode != ClickHandlerMode.SEARCHING:
@@ -217,7 +216,7 @@ class MapConnector:
             counter += 1
         return which_city
 
-    def handleClick(self, event:int, x:int, y:int, flags:int, param):
+    def handle_click(self, event:int, x:int, y:int, flags:int, param):
         """
         this method gets called whenever the user moves or clicks or does
         anything mouse-related while the mouse is in the "Map" window.
