@@ -304,9 +304,9 @@ class MapConnector:
         """
         finds the shortest path from self.first_city_id to self.second_city_id.
         Whether this is the shortest driving distance or the shortest time duration
-        is the programmer's choice.
-        :return: a list of ids that represents the path, or None, if no such
-        path can be found.
+        is the programmer's choice. (For testing, use distance.)
+        :return: a list of EdgeData's (like what you received in describePath) that represents the path, 
+        or None, if no such path can be found.
         """
 
         result_path:List[Edge_Data] = []
